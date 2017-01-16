@@ -2,6 +2,7 @@
 
 Nifty Travel is a full-service travel agency. The company seeks to update its current site to include the
 following specifications:
+
   • HTML5
   • CSS3
   • Mobile / responsive design
