@@ -1,0 +1,1 @@
+<div class="col-lg-12"> Copyright &copy; Nifty Travel agency 2017 </div>
