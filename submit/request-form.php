@@ -1,8 +1,12 @@
 <?php
+
+include_once "../sections/functions/variables.php";
+
 //Defining header as empty
-define('FROM_EMAIL', 'Nifty\'s Travel<noreply@niftystours.com>');
+define('FROM_EMAIL', $emailFrom);
 //Recipients
-define('TO_EMAIL', 'pashaUSA@gmail.com');
+define('TO_EMAIL', $emailTo);
+
 $errorMSG = "";
 /**
 * Function for sending messages. Checks input fields, prepares message and sends it.
