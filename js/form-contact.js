@@ -27,7 +27,7 @@ function submitForm(){
         url: "submit/contact-form.php",
         data: "name=" + name + "&email=" + email + "&tel=" + tel + "&subject=" + subject + "&message=" + message,
         success : function(text){
-            if (text == "success"){
+            if (text.includes("success")){
                 formSuccess();
             } else {
                 formError();
