@@ -28,7 +28,7 @@ function submitForm(){
         url: "submit/request-form.php",
         data: "name=" + name + "&email=" + email + "&tel=" + tel + "&tripName=" + tripName + "&translator=" + translator + "&language=" + language + "&startdate=" + startdate + "&enddate=" + enddate + "&number=" + number + "&message=" + message,
         success : function(text){
-            if (text == "success"){
+            if (text.includes("success")){
                 formSuccess();
             } else {
                 formError();
