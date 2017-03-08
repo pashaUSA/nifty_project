@@ -1,47 +1,30 @@
 <!-- Header -->
 <header>
-    <!-- Navigation -->
-    <?php 
-    //$currentLocation = basename($_SERVER['PHP_SELF']);
-    ?>
-    <nav id="mainNav" class="navbar navbar-nifty navbar-fixed-top navbar-custom">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span>Menu <i class="fa fa-bars"></i> </button>
-                <a id="nifty-logo" href="./"> <img src="images/logo.png" alt="Logo"> </a>
+    <div id="carouselIndicators" class="carousel slide control-round indicators-line" data-ride="carousel" data-interval="5000">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselIndicators" data-slide-to="1" class=""></li>
+                <li data-target="#carouselIndicators" data-slide-to="2" class=""></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <div class="img-fluid" style="background-image:url('images/gallery/barcelona.jpg');"></div>
+                </div>
+                <div class="item">
+                    <div class="img-fluid" style="background-image:url('images/gallery/budapest.jpg');"></div>
+                </div>
+                <div class="item">
+                    <div class="img-fluid" style="background-image:url('images/gallery/buddha-statues.jpg');"></div>
+                </div>
             </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <!--
-                        <li class="hidden">
-                            <a class="page-scroll" href="#page-top"></a>
-                        </li> -->
-                    <li <?php if ($currentLocation == 'index.php') echo 'class="active"'; ?>> <a class="page-scroll" href="./">Home</a> </li>
-                    <li> <a class="page-scroll" href="<?php if ($currentLocation == 'contact.php') echo './'; ?>#services">Services</a> </li>
-                    <li> <a class="page-scroll" href="<?php if ($currentLocation == 'contact.php') echo './'; ?>#places-gallery">Places to visit</a> </li>
-                    <li <?php if ($currentLocation == 'contact.php') echo 'class="active"'; ?>> <a class="page-scroll" href="contact.php">Contact</a> </li>
-                    <li class="dropdown"> <a href="#" class="dropdown-toggle">Currency Converter<span class="caret"></span></a>
-                        <ul id="currency" class="dropdown-menu">
-                            <li>
-                                <div class="row">
-                                    <div class="col-xs-12">
-                                        <div class="panel panel-default">
-                                            <div class="panel-body">
-                                                <?php include_once "sections/curency-converter.php"; ?>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
+            <a class="left carousel-control" href="#carouselIndicators" role="button" data-slide="prev">
+                <span class="fa fa-angle-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carouselIndicators" role="button" data-slide="next">
+                <span class="fa fa-angle-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
-        <!-- /.container-->
-    </nav>
 </header>
 <!-- /.header -->

@@ -1,8 +1,9 @@
 <section id="contact-form">
     <div class="container">
-        <div class="row">
             <h3 class="main-title">Contact <strong>Us</strong></h3>
-            <p class="lead">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
+            <p class="lead">Whether you’re looking for more information, or you’d like to let us know how we did, you’ll find easy ways to contact us right here.</p>
+							
+							<p class="lead"> You can also write us directly from your mail box. <br>Our contact email is: <a href="mailto:tours@nifty.com">tours@nifty.com</a></p>
             <div class="form-container">
                 <form class="contact-form" id="contactForm" data-toggle="validator">
                     <div class="row">
@@ -96,7 +97,5 @@
                 <!--/.contact-form -->
             </div>
             <!--/.form-container -->
-
-        </div>
     </div>
 </section>

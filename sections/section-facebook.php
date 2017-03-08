@@ -10,6 +10,6 @@
 
 </script>
 <h3>Facebook Feeds</h3>
-<div class="fb-page" data-href="<?php echo $facebookLink ?>" data-tabs="timeline" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+<div class="fb-page" data-href="<?php echo $facebookLink ?>" data-tabs="timeline" data-width="300" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
     <blockquote cite="<?php echo $facebookLink ?>" class="fb-xfbml-parse-ignore"><a href="<?php echo $facebookLink ?>">CAS 222</a></blockquote>
 </div>

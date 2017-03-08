@@ -1,24 +1,24 @@
 var rates = [];
 
-$(window).ready(function() {
+$(window).ready(function () {
 
     getData(); /* Get data for Curency Converter;*/
 
-    $(function() {
+    $(function () {
 
         $('#startdate,#enddate').datetimepicker({
             useCurrent: false,
             format: 'MM/DD/YYYY',
             minDate: moment()
         });
-        $('#startdate').datetimepicker().on('dp.change', function(e) {
+        $('#startdate').datetimepicker().on('dp.change', function (e) {
             var incrementDay = moment(new Date(e.date));
             incrementDay.add(1, 'days');
             $('#enddate').data('DateTimePicker').minDate(incrementDay);
             $(this).data("DateTimePicker").hide();
         });
 
-        $('#enddate').datetimepicker().on('dp.change', function(e) {
+        $('#enddate').datetimepicker().on('dp.change', function (e) {
             var decrementDay = moment(new Date(e.date));
             decrementDay.subtract(1, 'days');
             $('#startdate').data('DateTimePicker').maxDate(decrementDay);
@@ -28,7 +28,7 @@ $(window).ready(function() {
     });
 
     if ($("#translator").length > 0) {
-        $('#translator').on('change', function() {
+        $('#translator').on('change', function () {
             if ($('#translator').val() == 'Yes') {
                 $('#language-group').removeClass().addClass('form-group');
             } else {
@@ -63,7 +63,7 @@ $(window).ready(function() {
         buttonType: "btn",
         labelMargin: "10px",
         scrollable: false,
-        onSelect: function() {
+        onSelect: function () {
             setValues();
         }
     });
@@ -79,39 +79,47 @@ $(window).ready(function() {
         buttonType: "btn",
         labelMargin: "10px",
         scrollable: false,
-        onSelect: function() {
+        onSelect: function () {
             setValues();
         }
     });
     /*----------Functions to control Curency Toggle --------------*/
     $("#fromValue").val('1');
     setValues();
-    
+
     $('li.dropdown > a').on('click', function (event) {
         $(this).parent().toggleClass('open');
     });
-    
+
     $('.flagstrap .dropdown-menu').on('click', function (event) {
         $(this).parent().toggleClass('open');
     });
-    
+
     $('body').on('click', function (e) {
-        if (!$('li.dropdown').is(e.target) 
-            && $('li.dropdown').has(e.target).length === 0 
-            && $('.open').has(e.target).length === 0
+        if (!$('li.dropdown').is(e.target) &&
+            $('li.dropdown').has(e.target).length === 0 &&
+            $('.open').has(e.target).length === 0
         ) {
             $('li.dropdown').removeClass('open');
         }
     });
     /*--------------------End functions---------------------------*/
+    
+    $(document).on('click', '.navbar-collapse.in', function (e) {
+        if ($(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle') {
+            $(this).collapse('hide');
+        }
+    });
+
 });
+
 
 function getData() {
     $.ajax({
         dataType: "json",
         url: ('http://api.fixer.io/latest?base=ZAR;symbols=USD,CNY,MXN,EUR'),
         async: false,
-        success: function(data) {
+        success: function (data) {
             rates = data.rates;
         }
     })

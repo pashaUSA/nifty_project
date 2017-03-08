@@ -90,7 +90,7 @@ try {
     $result = $connection->query($sql);
 } 
 catch (PDOException $e) {
-    die('<div class="box-warning"><strong>3.</strong> Query failed! ' . $e->getMessage() . '</div>');
+    die('DB Query failed!');
 }
 
 // Notify contact form about result of sending.
@@ -102,7 +102,7 @@ if ($result && $errorMSG == ""){
     } else {
         echo $errorMSG;
     }
-}
+};
 
 
 ?>

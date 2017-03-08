@@ -12,29 +12,26 @@
     <link href="https://fonts.googleapis.com/css?family=Baloo|Dosis|Open+Sans|Play|Raleway" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/unite-gallery.css" rel="stylesheet" type="text/css">
+    <link href="css/scrolling-nav.css" rel="stylesheet" type="text/css">
+    <link href="css/flags.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css">
+    <link href="css/style.less" rel="stylesheet/less" type="text/css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- jQuery (necessary for Bootstraps JavaScript plugins) -->
     <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <!-- Script to get proper date for date field -->
+
+    <!-- Necessary Plugings  -->
     <script type="text/javascript" src="js/moment.js"></script>
-    <!-- Bootstrap -->
+    <script type="text/javascript" src="js/less.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <!-- Script for datePicker -->
     <script type="text/javascript" src="js/bootstrap-datetimepicker.js"></script>
-    <!-- Stylesheets -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="css/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css">
-    <link href="css/unite-gallery.css" rel="stylesheet" type="text/css">
-    <link href="css/flags.css" rel="stylesheet" type="text/css">
-    <link href="css/scrolling-nav.css" rel="stylesheet" type="text/css">
-    <link href="css/style.css" rel="stylesheet" type="text/css">
     <?php 
         if ($currentLocation == 'contact.php'){
            include_once "sections/google-map-scripts.php"; 
