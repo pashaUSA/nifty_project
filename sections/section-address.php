@@ -1,4 +1,4 @@
-<h3><strong><?php echo $businessNameTags ?></strong> traveling agency</h3>
+<h3><strong><?php $businessNameTags ?></strong> traveling agency</h3>
 <p class="mission-line">Be a <strong>full-service</strong> travel agency</p>
 <div class="icon">
     <i class="fa fa-home"></i>
@@ -22,7 +22,7 @@
     <p>9:00AM to 6:00PM</p>
 </div>
 <ul class="list-inline">
-    <li> <a href="<?php echo $facebookLink ?>" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook fa-2"></i></a> </li>
-    <li> <a href="<?php echo $twitterLink ?>" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter fa-2"></i></a> </li>
+    <li> <a href="<?php $facebookLink ?>" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook fa-2"></i></a> </li>
+    <li> <a href="<?php $twitterLink ?>" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter fa-2"></i></a> </li>
 
 </ul>

@@ -135,6 +135,12 @@ body header .control-round .carousel-control.right > span:nth-child(1) {
 body header .carousel-inner > .item {
   height: 95vh;
 }
+body .main-title {
+  font-weight: 300;
+  font-size: 40px;
+  margin-bottom: 30px;
+  text-transform: none;
+}
 h1,
 h2,
 h3,
@@ -202,21 +208,76 @@ nav .active a {
   background-color: #eeeeee;
   color: #747ba1;
 }
-section#hero {
-  min-height: auto;
+#return-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #000000;
+  background: rgba(0, 0, 0, 0.7);
+  width: 50px;
+  height: 50px;
+  display: block;
+  text-decoration: none;
+  -webkit-border-radius: 35px;
+  -moz-border-radius: 35px;
+  border-radius: 35px;
+  display: none;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+#return-to-top i {
+  color: #fff;
+  margin: 0;
+  position: relative;
+  left: 16px;
+  top: 13px;
+  font-size: 19px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+#return-to-top:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+#return-to-top:hover i {
+  color: #fff;
+  top: 5px;
+}
+section#about {
+  min-height: 95vh;
   background-image: url(../images/paris.jpg);
   background-size: cover;
   background-position: center 30%;
 }
-section .more-info-req-form {
-  padding-top: 40%;
+section#about .row {
+  height: 95vh;
+  display: table-cell;
+  width: 100vw;
+  vertical-align: middle;
+  text-align: center;
+  padding-top: 150px;
+  padding-bottom: 40px;
 }
-section .more-info-req-form form {
-  background: rgba(102, 103, 135, 0.85);
-  padding: 20px;
+section#about .row .main-title {
+  font-size: 4.5em;
+  background-color: #747ba1;
+  color: #ffffff;
+  padding: 10px 15%;
 }
-section .more-info-req-form form label {
-  color: #ffba77;
+section#about .row .content {
+  background-color: #ffba77;
+  background-color: rgba(255, 186, 119, 0.85);
+  padding: 35px;
+  font-size: 1.35em;
+}
+section#about .row .content .lead {
+  font-weight: bold;
 }
 section#action {
   background-color: #4d5886;
@@ -283,6 +344,85 @@ section#about .service.flat-icon {
   padding: 0 0 0 100px;
   margin-bottom: 30px;
 }
+section#tours {
+  background: #fbedd7;
+  border-top: 4px double #9697ae;
+  border-bottom: 4px double #9697ae;
+}
+section#tours .tour-gen {
+  padding-top: 80px;
+  padding-bottom: 40px;
+  background: #ffffff;
+}
+section#tours .tour-gen p,
+section#tours .tour-gen ul {
+  font-size: 18px;
+}
+section#tours ul.nav.nav-tabs li {
+  background-color: rgba(116, 123, 161, 0.75);
+  border-right: 1px solid #fff;
+  width: 20%;
+  float: left;
+}
+section#tours ul.nav.nav-tabs li:first-child {
+  border-left: 1px solid #ffffff;
+}
+section#tours ul.nav.nav-tabs li a {
+  color: #fff;
+  font-size: 1.8em;
+  line-height: 2.5em;
+  border: none;
+  margin-bottom: 0;
+}
+section#tours .nav-tabs.nav-justified > .active > a,
+section#tours .nav-tabs.nav-justified > .active > a:focus,
+section#tours .nav-tabs.nav-justified > .active > a:hover {
+  background-color: rgba(77, 88, 134, 0.75);
+  border: none;
+  border-radius: 0;
+}
+section#tours .nav-tabs > li.active > a,
+section#tours .nav-tabs > li.active > a:focus,
+section#tours .nav-tabs > li.active > a:hover,
+section#tours .nav-tabs > li > a:hover,
+section#tours .nav-tabs > li > a:focus {
+  background-color: rgba(77, 88, 134, 0.75);
+  border: none;
+  border-radius: 0;
+  color: #ffffff;
+}
+section#tours label {
+  font-weight: 100;
+  cursor: pointer;
+  display: none;
+}
+section#tours img.img-icon {
+  width: 50px;
+  padding-right: 0px;
+}
+section#tours img.tour-img {
+  width: 100%;
+}
+section#tours .panel-nifty {
+  background-color: rgba(116, 123, 161, 0.75);
+}
+section#tours .panel-nifty .panel {
+  margin-bottom: 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background-color: transparent;
+}
+section#tours .panel-nifty .panel-heading {
+  padding: 0;
+  border: none;
+  border-radius: 0;
+}
+section#tours .panel-body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background: #ffffff;
+}
 section#testimonials {
   background-image: url(../images/nifty-map.png);
   background-repeat: repeat;
@@ -292,8 +432,11 @@ section#testimonials .overlay {
   background-color: rgba(255, 255, 255, 0.48);
 }
 section#testimonials #testimonial-carousel {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  height: 700px;
+  display: table-cell;
+  width: 100vw;
+  vertical-align: middle;
+  text-align: center;
 }
 section#testimonials #testimonial-carousel .carousel-control {
   background: none;
@@ -340,6 +483,9 @@ section#testimonials #testimonial-carousel .carousel-indicators .active {
   opacity: 1;
   overflow: hidden;
 }
+section#testimonials #testimonial-carousel .carousel-indicators .active img {
+  padding: 12px;
+}
 section#testimonials #testimonial-carousel .item blockquote p:before {
   content: "\f10d";
   font-family: 'Fontawesome';
@@ -384,6 +530,28 @@ section#testimonials .item .quote .icon-avatar img {
   max-width: 100px;
   border-radius: 50px;
   border: 3px solid #745577;
+}
+section#more-info-req-form {
+  background-image: url(../images/217432.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+section#more-info-req-form .overlay {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+section#more-info-req-form .more-info {
+  height: 95vh;
+  display: table-cell;
+  width: 100vw;
+  vertical-align: middle;
+}
+section#more-info-req-form .more-info form {
+  background: rgba(102, 103, 135, 0.85);
+  padding: 20px;
+}
+section#more-info-req-form .more-info form label {
+  color: #ffba77;
 }
 section#places-gallery {
   padding-top: 120px;
@@ -505,13 +673,27 @@ footer .footer-below {
   section .more-info-req-form {
     padding-top: 20%;
   }
+  section#tours label {
+    display: block;
+    white-space: nowrap;
+  }
+  section#tours img.img-icon {
+    width: 75px;
+    padding-right: 20px;
+  }
+  section#about .row {
+    padding-top: 80px;
+  }
+  section#about .row .main-title {
+    font-size: 6em;
+  }
 }
 /* DESKTOP STYLES */
 @media only screen and (min-width: 1025px) {
   section .more-info-req-form {
     padding-top: 15%;
   }
-  section#hero {
+  section#about {
     height: 95vh;
     background-image: none;
   }
@@ -519,24 +701,10 @@ footer .footer-below {
     display: block;
   }
 }
-.main-title {
-  font-weight: 300;
-  font-size: 40px;
-  margin-bottom: 30px;
-  text-transform: none;
-}
 .form-heading {
-  font-family: 'Dosis', sans-serif;
-  font-weight: bold;
   border-bottom: 1px solid #ffba77;
   margin-left: 15px;
   color: #ffba77;
-}
-.main-title {
-  font-weight: 300;
-  font-size: 40px;
-  margin-bottom: 30px;
-  text-transform: none;
 }
 i.fa {
   color: #242a3a;
@@ -565,6 +733,64 @@ i.fa.fa-bars {
   color: #4d5886;
   width: 50%;
 }
-.fade.in {
+.modal.fade.in {
   background-color: rgba(22, 13, 16, 0.75);
 }
+.text-success,
+.text-danger {
+  background: #fff;
+  padding: 5px;
+}
+.medpadding {
+  padding: 20px;
+}
+/*--------------Styles for Video--------------*/
+video {
+  vertical-align: middle;
+}
+.error body,
+html.error {
+  height: 100%;
+}
+.error body {
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+}
+.error main {
+  display: table-cell;
+  width: 100%;
+}
+video {
+  max-width: 100%;
+}
+.plyr {
+  margin: 0 auto;
+  border-radius: 6px;
+}
+.plyr--audio {
+  max-width: 520px;
+}
+.plyr__video-wrapper::after {
+  pointer-events: none;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: inherit;
+}
+.plyr__cite {
+  display: none;
+  margin-top: 20px;
+}
+.plyr__cite .icon {
+  margin-right: 5px;
+}
+.plyr--audio ~ ul .plyr__cite--audio,
+.plyr--video:not(.plyr--youtube):not(.plyr--vimeo) ~ ul .plyr__cite--video,
+.plyr--vimeo ~ ul .plyr__cite--vimeo,
+.plyr--youtube ~ ul .plyr__cite--youtube {
+  display: block;
+}
+/*----------------------------------------------------*/
