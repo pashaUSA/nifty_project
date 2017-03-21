@@ -1,8 +1,12 @@
 <?php
 
-define("DB_DSN", "mysql:host=localhost;dbname=caswork_nifty_project;charset=utf8");
-define("DB_USER", "caswork_nifty_u");
-define("DB_PASS", "!nifty503");
+$databaseName = "caswork_nifty_project";
+$databaseUser = "caswork_nifty_u";
+$databasePassword = "!nifty503";
+
+define("DB_DSN", "mysql:host=localhost;dbname=$databaseName;charset=utf8");
+define("DB_USER", $databaseUser);
+define("DB_PASS", $databasePassword);
 
 // Create a database connection
 
