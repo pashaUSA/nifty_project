@@ -50,16 +50,25 @@
   </dd>
   
   <hr>
+  <dt>Change Database credentials</dt>
+  <dd><ol>
+        <li>Open file '/submit/connection.php' </li>
+        <li>Find variable $databaseName, $databaseUser, and $databasePassword </li>
+        <li>Assign new values to all three variables, make sure that email is surrounded by single quotes</li>
+        <li>Save file and upload it back to the server</li>
+      </ol>
+  </dd>
+  <hr>  
+  
+  
   <dt>Change recipient's email address for both forms ("contact form" and "request more information form")</dt>
   
   <dd><ol>
         <li>Open file '/sections/functions/variables.php' </li>
-        <li>Find variable  </li>
-        <li>Change email address to desired one</li>
+        <li>Find variable $emailTo </li>
+        <li>Assign new email address to $emailTo, make sure that email is surrounded by single quotes</li>
         <li>Save file and upload it back to the server</li>
         </ol></dd>
         <hr>
-  <dt>Milk</dt>
-  <dd>White cold drink</dd>
-  <hr>
+
 </dl>
