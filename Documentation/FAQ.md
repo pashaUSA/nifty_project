@@ -6,7 +6,6 @@
   <dd><ol>
 	<li>Download, install, and launch <a href="https://filezilla-project.org/download.php?show_all=1">FileZilla</a>.</li>
 	<li>Complete the following fields, and then click <strong>Quickconnect</strong>.
-		<p class="note">To make sure you use the right information, it helps to know <a href="//www.godaddy.com/help/what-type-of-hosting-account-do-i-have-6971">what type of hosting account you have</a>.</p>
 	<table>
 		<tbody><tr>
 			<th>Field</th>
